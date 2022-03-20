@@ -1,0 +1,88 @@
+.AboutContainer{
+    height: 100%;    
+    h1{
+        color: white;
+        text-align: center;
+        width: 100%;
+        margin: 0%;
+    }
+    .BackgroundAnimation{
+        background-color: rgb(7, 7, 7);
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        display: flex;
+        overflow: hidden;
+        justify-content: space-evenly;
+        figure{
+            margin: 0%;
+            width: 20%;
+            .JsLogo{
+                width: 70px;
+                opacity: 0.3;
+            }
+            .ReactLogo{
+                width: 70px;
+                opacity: 0.3;
+                filter: invert(50%);
+            }
+            .ScssLogo{
+                filter: invert(70%);
+                width: 70px;
+                z-index: 100;
+            }
+            .NodeLogo{
+                filter: invert(40%);
+                width: 70px;
+            }
+            .SqlLogo{
+                filter: invert(40%);
+                width: 70px;
+            }
+        }
+    }
+    .AboutText{
+        position: relative;
+        width: 95%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin: 20px;
+        div{
+            border: 1px solid white;
+            width: 70%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding-bottom: 45px;
+            p{
+                font-size: 1.35rem;
+                flex-basis: 45%;
+                padding: 2.5%;
+            }
+            button{
+                margin-top: 30px;
+                background-color: rgba(0, 255, 255, 0);
+                color: white;
+                flex-basis: 100%;
+                padding: 10px;
+                border: none;
+                text-decoration: underline;
+            }
+            button:hover{
+                transform: scale(1.075);
+            }
+            button:active{
+                transform: translateY(1px);
+            }
+        }
+    }
+    @media only screen and (max-width: 400px) {
+        .AboutText{
+            margin: 0%;
+        }
+    }
+
+}

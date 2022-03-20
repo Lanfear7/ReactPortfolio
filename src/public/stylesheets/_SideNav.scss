@@ -1,0 +1,113 @@
+.SideNav{
+    position: sticky;
+    top: 1%;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    z-index: 15;
+    .BurgerBtn{
+        margin-right: 2%;
+        height: 70px;
+        width: 70px;
+        cursor: pointer;
+        figure{
+            margin: 0;
+            height: 70px;
+            width: 70px;
+            img{
+                width: 100%;
+                height: 100%;
+                filter: invert(100%);
+            }
+        }
+    }
+}
+
+.NavBar{
+    position: sticky;
+    top: 0%;
+    left: 0%;
+    width: 30%;
+    margin-left: 21%;
+    z-index: 20;
+    .Content{
+        position: absolute;
+        top: 0%;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(97, 44, 161, 0.966);
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        p{
+            text-align: end;
+            margin-left: 85%;
+            margin-top: 10px;
+            color: white;
+            font-size: 40px;
+            height: 50px;
+            cursor: pointer;
+        }
+        p:hover{
+            color: white;
+        }
+        a{
+            flex-basis: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            h1{
+                width: 150px;
+                margin: 0;
+                display: inline-block;
+                position: relative;
+            }
+            h1:after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                transform: scale(0);
+                height: 1px;
+                bottom: 0;
+                left: 0;
+                background-color: white;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out;
+            }
+            h1:hover:after {
+                transform: scaleX(1);
+                transform-origin: bottom left;
+              }
+            h1:hover{
+                color: white;
+            }
+        }
+        
+        
+    }
+    
+}
+
+@media screen and (max-width: 850px) {
+    .NavBar {
+        position: sticky;
+        top: 0%;
+        left: 0%;
+        width: 100%;
+        padding-right: 3px;
+        z-index: 20;
+        .Content{
+            position: absolute;
+            top: 0%;
+            width: 100%;
+            height: 100vh;
+            background-color: rgb(97, 44, 161);
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+    }
+  }

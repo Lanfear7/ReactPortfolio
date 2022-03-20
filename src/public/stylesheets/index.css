@@ -1,0 +1,649 @@
+@import url("https://fonts.googleapis.com/css2?family=Smooch&display=swap");
+.App {
+  background-color: #070707;
+  height: 100%;
+}
+
+.App .SideNav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 1%;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  z-index: 15;
+}
+
+.App .SideNav .BurgerBtn {
+  margin-right: 2%;
+  height: 70px;
+  width: 70px;
+  cursor: pointer;
+}
+
+.App .SideNav .BurgerBtn figure {
+  margin: 0;
+  height: 70px;
+  width: 70px;
+}
+
+.App .SideNav .BurgerBtn figure img {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: invert(100%);
+          filter: invert(100%);
+}
+
+.App .NavBar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0%;
+  left: 0%;
+  width: 30%;
+  margin-left: 21%;
+  z-index: 20;
+}
+
+.App .NavBar .Content {
+  position: absolute;
+  top: 0%;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(97, 44, 161, 0.966);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.App .NavBar .Content p {
+  text-align: end;
+  margin-left: 85%;
+  margin-top: 10px;
+  color: white;
+  font-size: 40px;
+  height: 50px;
+  cursor: pointer;
+}
+
+.App .NavBar .Content p:hover {
+  color: white;
+}
+
+.App .NavBar .Content a {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: black;
+  height: 60px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.App .NavBar .Content a h1 {
+  width: 150px;
+  margin: 0;
+  display: inline-block;
+  position: relative;
+}
+
+.App .NavBar .Content a h1:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
+  -webkit-transition: -webkit-transform 0.25s ease-out;
+  transition: -webkit-transform 0.25s ease-out;
+  transition: transform 0.25s ease-out;
+  transition: transform 0.25s ease-out, -webkit-transform 0.25s ease-out;
+}
+
+.App .NavBar .Content a h1:hover:after {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
+  -webkit-transform-origin: bottom left;
+          transform-origin: bottom left;
+}
+
+.App .NavBar .Content a h1:hover {
+  color: white;
+}
+
+@media screen and (max-width: 850px) {
+  .App .NavBar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    padding-right: 3px;
+    z-index: 20;
+  }
+  .App .NavBar .Content {
+    position: absolute;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    background-color: #612ca1;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.App .AboutContainer {
+  height: 100%;
+}
+
+.App .AboutContainer h1 {
+  color: white;
+  text-align: center;
+  width: 100%;
+  margin: 0%;
+}
+
+.App .AboutContainer .BackgroundAnimation {
+  background-color: #070707;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.App .AboutContainer .BackgroundAnimation figure {
+  margin: 0%;
+  width: 20%;
+}
+
+.App .AboutContainer .BackgroundAnimation figure .JsLogo {
+  width: 70px;
+  opacity: 0.3;
+}
+
+.App .AboutContainer .BackgroundAnimation figure .ReactLogo {
+  width: 70px;
+  opacity: 0.3;
+  -webkit-filter: invert(50%);
+          filter: invert(50%);
+}
+
+.App .AboutContainer .BackgroundAnimation figure .ScssLogo {
+  -webkit-filter: invert(70%);
+          filter: invert(70%);
+  width: 70px;
+  z-index: 100;
+}
+
+.App .AboutContainer .BackgroundAnimation figure .NodeLogo {
+  -webkit-filter: invert(40%);
+          filter: invert(40%);
+  width: 70px;
+}
+
+.App .AboutContainer .BackgroundAnimation figure .SqlLogo {
+  -webkit-filter: invert(40%);
+          filter: invert(40%);
+  width: 70px;
+}
+
+.App .AboutContainer .AboutText {
+  position: relative;
+  width: 95%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: white;
+  margin: 20px;
+}
+
+.App .AboutContainer .AboutText div {
+  border: 1px solid white;
+  width: 70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-bottom: 45px;
+}
+
+.App .AboutContainer .AboutText div p {
+  font-size: 1.35rem;
+  -ms-flex-preferred-size: 45%;
+      flex-basis: 45%;
+  padding: 2.5%;
+}
+
+.App .AboutContainer .AboutText div button {
+  margin-top: 30px;
+  background-color: rgba(0, 255, 255, 0);
+  color: white;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  padding: 10px;
+  border: none;
+  text-decoration: underline;
+}
+
+.App .AboutContainer .AboutText div button:hover {
+  -webkit-transform: scale(1.075);
+          transform: scale(1.075);
+}
+
+.App .AboutContainer .AboutText div button:active {
+  -webkit-transform: translateY(1px);
+          transform: translateY(1px);
+}
+
+@media only screen and (max-width: 400px) {
+  .App .AboutContainer .AboutText {
+    margin: 0%;
+  }
+}
+
+.App .Banner {
+  height: 100vh;
+  min-height: 450px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.App .Banner .BannerContainer {
+  width: 100%;
+}
+
+.App .Banner .BannerContainer h1, .App .Banner .BannerContainer h2 {
+  text-align: center;
+  margin: 0px;
+  color: white;
+  height: 40px;
+  z-index: 1;
+}
+
+.App .Banner .BannerContainer h1 {
+  font-size: 80px;
+  font-family: 'Smooch', cursive;
+}
+
+.App .Banner .BannerContainer h2 {
+  font-size: 30px;
+}
+
+.App .Banner .BannerContainer .Card {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 90px;
+  background-color: #070707;
+}
+
+@media screen and (max-width: 525px) {
+  .App .Banner {
+    height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .App .Banner .BannerContainer {
+    width: 100%;
+  }
+  .App .Banner .BannerContainer h1, .App .Banner .BannerContainer h2 {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    text-align: center;
+    margin: 0px;
+    color: white;
+    height: 40px;
+    z-index: 1;
+  }
+  .App .Banner .BannerContainer h1 {
+    height: 200px;
+    font-size: 80px;
+    font-family: 'Smooch', cursive;
+  }
+  .App .Banner .BannerContainer h2 {
+    font-size: 30px;
+  }
+  .App .Banner .BannerContainer .Card {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 200px;
+    background-color: #070707;
+  }
+}
+
+.App .ProjectsContainer {
+  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(15deg, transparent 35%, #070707 1em), white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.App .ProjectsContainer h1 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+  color: white;
+  margin: 0;
+  background-color: #070707;
+}
+
+.App .ProjectsContainer .Project {
+  margin-top: 20%;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.App .ProjectsContainer .Project .ProjectContents {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  height: 65vh;
+  color: white;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .MainContent {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  height: 80%;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .MainContent h1 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .MainContent p {
+  width: 90%;
+  height: 20%;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .MainContent .Links {
+  height: 10%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .MainContentWhite {
+  color: #070707;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .MainContentWhite h1 {
+  background-color: white;
+  color: #070707;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .TeachStackLogos {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .TeachStackLogos figure {
+  width: 100px;
+  height: 100px;
+  margin: 0%;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .TeachStackLogos figure img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  -webkit-filter: invert(10%);
+          filter: invert(10%);
+}
+
+.App .ProjectsContainer .Project .ProjectContents .TeachStackLogos .dynamo {
+  width: 250px;
+}
+
+.App .ProjectsContainer .Project .ProjectContents .TeachStackLogosWhite figure .AWS {
+  -webkit-filter: invert(90%);
+          filter: invert(90%);
+}
+
+@media only screen and (max-width: 1100px) {
+  .App .ProjectsContainer .Project .ProjectContents {
+    height: 100%;
+  }
+  .App .ProjectsContainer .Project .ProjectContents .TeachStackLogos {
+    margin-top: 20%;
+  }
+}
+
+.App .ProjectsContainer .Project .AnimationContainer {
+  overflow: hidden;
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  height: 65vh;
+}
+
+.App .ProjectsContainer .Project .AnimationContainer figure {
+  border: 1px white solid;
+  margin: 0%;
+  width: 400px;
+  height: 300px;
+}
+
+.App .ProjectsContainer .Project .AnimationContainer figure img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+@media only screen and (max-width: 700px) {
+  .App .ProjectsContainer .Project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .App .ProjectsContainer .Project .ProjectContents {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .App .ProjectsContainer .Project .ProjectContents .TeachStackLogos {
+    margin-top: 5%;
+  }
+  .App .ProjectsContainer .Project .AnimationContainer {
+    -ms-flex-preferred-size: 500px;
+        flex-basis: 500px;
+    overflow: hidden;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .App .ProjectsContainer .Project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .App .ProjectsContainer .Project .ProjectContents {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+  .App .ProjectsContainer .Project .ProjectContents .TeachStackLogos {
+    margin-top: 5%;
+  }
+  .App .ProjectsContainer .Project .AnimationContainer {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    overflow: hidden;
+  }
+  .App .ProjectsContainer .Project .AnimationContainer figure {
+    width: 300px;
+  }
+}
+
+.App #ContactMe {
+  background-color: white;
+  height: 110%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.App #ContactMe h1 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 0%;
+  text-align: center;
+  color: #070707;
+  margin-top: 40px;
+}
+
+.App #ContactMe form {
+  height: 60%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.App #ContactMe form input {
+  height: 20px;
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.App #ContactMe form textarea {
+  -ms-flex-preferred-size: 90%;
+      flex-basis: 90%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.App #ContactMe form .Btn {
+  margin-top: 20px;
+  -ms-flex-preferred-size: 10%;
+      flex-basis: 10%;
+  border: 1px solid #070707;
+  background-color: white;
+  height: 30px;
+}
+
+.App #ContactMe h2 {
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  text-align: center;
+}
+
+.App #ContactMe .Sent {
+  color: #19cc19;
+}
+
+.App #ContactMe .Error {
+  color: #ff2626;
+}
+/*# sourceMappingURL=index.css.map */

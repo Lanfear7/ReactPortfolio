@@ -1,0 +1,144 @@
+.ProjectsContainer{
+    margin-top: 60px;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(15deg, transparent 35% , rgb(7, 7, 7) 1em ), white;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    h1{
+        flex-basis: 100%;
+        text-align: center;
+        color: white;
+        margin: 0;
+        background-color: rgb(7, 7, 7);
+    }
+    .Project{
+        margin-top: 20%;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        .ProjectContents{
+            flex-basis: 50%;
+            height: 65vh;
+            color: white;
+            .MainContent{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+                height: 80%;
+                h1{
+                    flex-basis: 100%;
+                }
+                p{
+                    width: 90%;
+                    height: 20%;
+                }
+                .Links{
+                    height: 10%;
+                    flex-basis: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+            }
+            .MainContentWhite{
+                color: rgb(7, 7, 7);
+                h1{
+                    background-color: white;
+                    color: rgb(7, 7, 7);
+                }
+            }
+            .TeachStackLogos{
+                width: 100%;
+                display: flex;
+                justify-content: space-evenly;
+                flex-wrap: wrap;
+                figure{
+                    width: 100px;
+                    height: 100px;
+                    margin: 0%;
+                    img{
+                        object-fit: cover;
+                        width: 100%;
+                        height: 100%;
+                        filter: invert(10%);
+                    }
+                }
+                .dynamo{
+                    width: 250px;
+                }
+            }
+            .TeachStackLogosWhite{
+                figure{
+                    .AWS{
+                        filter: invert(90%);
+                    }
+                }
+            }
+        }
+        @media only screen and (max-width: 1100px) {
+            .ProjectContents{
+                height: 100%;
+                .TeachStackLogos{
+                    margin-top: 20%;
+                }
+            }
+          }
+        .AnimationContainer{
+            overflow: hidden;
+            flex-basis: 50%;
+            height: 65vh;
+            figure{
+                border: 1px white solid;
+                margin: 0%;
+                width: 400px;
+                height: 300px;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+    @media only screen and (max-width: 700px) {
+        .Project{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            .ProjectContents{
+                flex-basis: 100%;
+                .TeachStackLogos{
+                    margin-top: 5%;
+                }
+            }
+            .AnimationContainer{
+                flex-basis: 500px;
+                overflow: hidden;
+            }
+        }
+      }
+
+      @media only screen and (max-width: 400px) {
+        .Project{
+            display: flex;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+            .ProjectContents{
+                flex-basis: 100%;
+                .TeachStackLogos{
+                    margin-top: 5%;
+                }
+            }
+            .AnimationContainer{
+                flex-basis: 100%;
+                overflow: hidden;
+                figure{
+                    width: 300px;
+                }
+            }
+        }
+      }
+    
+}
