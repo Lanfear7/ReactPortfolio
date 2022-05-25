@@ -24,7 +24,9 @@ function ContactMe() {
         }else{
             setMessage('Please fill in the all of the information in the form!')
         }
-        
+        setName('')
+        setEmail('')
+        setEmailMessage('') 
       };
 
     return (

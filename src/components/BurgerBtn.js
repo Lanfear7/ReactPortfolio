@@ -20,7 +20,7 @@ function BurgerBtn() {
 
   const popOutTransitionMobile = useTransition(toggle,{
     from: {x: 700, opacity: 0},
-    enter: {x: -windowDimensions.width / 5 -7, opacity: 1},
+    enter: {x: -windowDimensions.width / 5 - 6, opacity: 1},
     leave: {x: 700},
   })
 

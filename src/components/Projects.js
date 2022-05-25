@@ -53,7 +53,6 @@ function Projects() {
     delay: 9000
   })
 
-  console.log(windowDimensions.width)
   return (
     <div id="Projects" className='ProjectsContainer'>
 
