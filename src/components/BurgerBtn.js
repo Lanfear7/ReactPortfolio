@@ -6,10 +6,7 @@ import { useTransition, animated } from 'react-spring'
 
 function BurgerBtn() {
  
-
-  const {toggle, setToggle} = useContext(ScreenSizeContext) 
-
-  const {windowDimensions} = useContext(ScreenSizeContext)         //using global state
+    const {windowDimensions, toggle, setToggle, scrollTop} = useContext(ScreenSizeContext)         //using global state
 
 
   const popOutTransition = useTransition(toggle,{
@@ -45,6 +42,7 @@ function BurgerBtn() {
     leave: { opacity: 0 },
     
   })
+
 
   return (
     <>
@@ -88,18 +86,28 @@ function BurgerBtn() {
       
       {
         toggle?
+        
         <div className='SideNav'>
           <div className='BurgerBtn'>
           </div>
         </div> 
         :
         <div className='SideNav'>
-        <div className='BurgerBtn'>
-          <figure onClick={()=>setToggle(!toggle)}>
-            <img src={Burger}></img>
-          </figure>
+          {
+            scrollTop <= 3800 ? 
+              <div className='BurgerBtn'>
+                <figure onClick={()=>setToggle(!toggle)}>
+                  <img src={Burger}></img>
+                </figure>
+              </div>
+            :
+            <div className='BurgerBtn'>
+            <figure onClick={()=>setToggle(!toggle)}>
+              <img src={Burger} className='BlackBtn'></img>
+            </figure>
+          </div>
+          }
         </div>
-      </div>
       }
       
     </>

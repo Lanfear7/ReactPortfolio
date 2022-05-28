@@ -53,11 +53,16 @@ function Projects() {
     delay: 9000
   })
 
+
+  function ImgPopUp(e){
+    console.log('clicked item', e.target.src)
+    return <h1>ZFDGDZHDRHDRHDHA</h1>
+  }
+  
+
   return (
     <div id="Projects" className='ProjectsContainer'>
-
-      <h1>Projects</h1>
-
+      <h1 className='Heading'>Projects</h1>
       <div className='Project'>
         <div className='ProjectContents'>
           <div className='MainContent'>
@@ -83,21 +88,22 @@ function Projects() {
           </div>
         </div>
         <div className='AnimationContainer'>
-          <animated.figure style={styles1} className="pic2" onClick={()=>{console.log('clicked')}}>
+          <animated.figure style={styles1} className="pic2" onClick={(e)=>{ImgPopUp(e)}}>
             <img src={Project1003}></img>
           </animated.figure>
-          <animated.figure style={styles2} className="pic1">
+          <animated.figure style={styles2} className="pic1" onClick={(e)=>{ImgPopUp(e)}}>
             <img src={Project1001}></img>
           </animated.figure>
-          <animated.figure style={styles3} className="pic2">
+          <animated.figure style={styles3} className="pic2" onClick={(e)=>{ImgPopUp(e)}}>
             <img src={Project1002}></img>
           </animated.figure>
-          <animated.figure style={styles4} className="pic2">
+          <animated.figure style={styles4} className="pic2" onClick={(e)=>{ImgPopUp(e)}}>
             <img src={Project1004}></img>
           </animated.figure>
         </div>
       </div>
       {
+        //only for project 2 on width less then 700 it will format the html in a nice way for the user to see it
         windowDimensions.width >= 700 ?
         <div className='Project'>
         <div className='AnimationContainer'>
