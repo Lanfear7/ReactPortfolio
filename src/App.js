@@ -3,7 +3,7 @@ import Banner from './components/Banner';
 import BurgerBtn from './components/BurgerBtn';
 import Projects from './components/Projects';
 import About from './components/About'
-import { ScreenSizeContext } from './helper/Context';       //Context -> Golbal State
+import { ScreenSizeContext, ProjectPopUP } from './helper/Context';       //Context -> Golbal State
 import './public/stylesheets/index.css'
 import ContactMe from './components/ContactMe';
 
@@ -13,6 +13,9 @@ function App() {
   const [toggle, setToggle] = useState(false)
   const [toggleAboutAnimation, setToggleAboutAnimation] = useState(false)
   const [scrollTop, setScrollTop] = useState(0);
+
+  const [projectPopUp, setProjectPopUp] = useState(false)
+  const [popUpImg, setPopUpImg] = useState()
 
   function getWindowDimensions() {
     const { innerWidth: width, innerHeight: height } = window;
@@ -60,6 +63,20 @@ function App() {
   }, []);
 
 
+  function ImgCardPopUp(){
+    return <div className='popUpBackGround'>
+      <div className='popUpContainer'>
+        <div className='CloseBtnContainer'>
+          <h1 onClick={()=>setProjectPopUp(false)}>X</h1>
+        </div>
+        <figure>
+          <img src={popUpImg}></img>
+        </figure>
+      </div>
+    </div>
+  }
+
+
   return (
     <ScreenSizeContext.Provider value={{windowDimensions, setWindowDimensions,
     toggle, setToggle,
@@ -67,13 +84,18 @@ function App() {
     scrollTop, setScrollTop,
 
     }}>
-      <div className="App">
-        <BurgerBtn  />
-        <Banner />
-        <About /> 
-        <Projects />
-        <ContactMe />
-      </div>
+      <ProjectPopUP.Provider value={{projectPopUp, setProjectPopUp, popUpImg, setPopUpImg}}>
+        <div className="App">
+          {
+            projectPopUp && ImgCardPopUp()
+          }
+          <BurgerBtn  />
+          <Banner />
+          <About /> 
+          <Projects />
+          <ContactMe />
+        </div>
+      </ProjectPopUP.Provider>
     </ScreenSizeContext.Provider>
   );
 }

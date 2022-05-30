@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { ScreenSizeContext } from '../helper/Context'
+import { ScreenSizeContext, ProjectPopUP } from '../helper/Context'
 import { useSpring, animated, useTransition } from 'react-spring'
 
 import Project1001 from '../public/images/project1-001.png'
@@ -19,6 +19,7 @@ import DynamoDB from '../public/images/dynamoDB.png'
 function Projects() {
 
   const {windowDimensions, scrollTop} = useContext(ScreenSizeContext)
+  const {setProjectPopUp, setPopUpImg } = useContext(ProjectPopUP)
 
 
   const styles1 = useSpring({
@@ -62,15 +63,16 @@ function Projects() {
 
 
   function ImgPopUpSetUp(e){
-    setPopUp(true)
-    setImg(e.target.src)
+    setProjectPopUp(true)
+    setPopUpImg(e.target.src)
   }
 
   function ImgCardPopUp(){
     return <div className='popUpBackGround'>
       <div className='popUpContainer'>
-        <h1>PopUp</h1>
-        <img src={img}></img>
+        <figure>
+          <img src={img}></img>
+        </figure>
       </div>
     </div>
   }
@@ -78,178 +80,171 @@ function Projects() {
 
   return (
     <>
-    {
-      popUp 
-      ?
-        ImgCardPopUp()
-      :
       <div id="Projects" className='ProjectsContainer'>
-      <h1 className='Heading'>Projects</h1>
-      <div className='Project'>
-        <div className='ProjectContents'>
-          <div className='MainContent'>
-            <h1>RuneDen</h1>
-            <p>RuneDen is a hub for gamers to get texture packs or seeds for their Minecraft worlds! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
-            <div className='Links'>
-              <a>Live Link</a>
-            </div>
-          </div>
-          <div className='TeachStackLogos'>
-            <figure>
-              <img src={ReactLogo}></img>
-            </figure>
-            <figure>
-              <img src={AWS}></img>
-            </figure>
-            <figure>
-              <img src={Lambda}></img>
-            </figure>
-            <figure className='dynamo'>
-              <img src={DynamoDB}></img>
-            </figure>
-          </div>
-        </div>
-        <div className='AnimationContainer'>
-          <animated.figure style={styles1} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
-            <img src={Project1003}></img>
-          </animated.figure>
-          <animated.figure style={styles2} className="pic1" onClick={(e)=>{ImgPopUpSetUp(e)}}>
-            <img src={Project1001}></img>
-          </animated.figure>
-          <animated.figure style={styles3} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
-            <img src={Project1002}></img>
-          </animated.figure>
-          <animated.figure style={styles4} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
-            <img src={Project1004}></img>
-          </animated.figure>
-        </div>
-      </div>
-      {
-        //only for project 2 on width less then 700 it will format the html in a nice way for the user to see it
-        windowDimensions.width >= 700 ?
+        <h1 className='Heading'>Projects</h1>
         <div className='Project'>
-        <div className='AnimationContainer'>
-          <animated.figure style={styles1} className="pic2" onClick={()=>{console.log('clicked')}}>
-            <img src={Project1003}></img>
-          </animated.figure>
-          <animated.figure style={styles2} className="pic1">
-            <img src={Project1001}></img>
-          </animated.figure>
-          <animated.figure style={styles3} className="pic2">
-            <img src={Project1002}></img>
-          </animated.figure>
-          <animated.figure style={styles4} className="pic2">
-            <img src={Project1004}></img>
-          </animated.figure>
-        </div>
-        <div className='ProjectContents'>
-          <div className='MainContent'>
-            <h1>Project 2</h1>
-            <p>RuneDen is a hub for gamers to get texture packs or seeds for their Minecraft worlds! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
-            <div className='Links'>
-              <a>Live Link</a>
+          <div className='ProjectContents'>
+            <div className='MainContent'>
+              <h1>RuneDen</h1>
+              <p>RuneDen is a hub for gamers to get texture packs or seeds for their Minecraft worlds! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
+              <div className='Links'>
+                <a>Live Link</a>
+              </div>
+            </div>
+            <div className='TeachStackLogos'>
+              <figure>
+                <img src={ReactLogo}></img>
+              </figure>
+              <figure>
+                <img src={AWS}></img>
+              </figure>
+              <figure>
+                <img src={Lambda}></img>
+              </figure>
+              <figure className='dynamo'>
+                <img src={DynamoDB}></img>
+              </figure>
             </div>
           </div>
-          <div className='TeachStackLogos'>
-            <figure>
-              <img src={ReactLogo}></img>
-            </figure>
-            <figure>
-              <img src={AWS}></img>
-            </figure>
-            <figure>
-              <img src={Lambda}></img>
-            </figure>
-            <figure className='dynamo'>
-              <img src={DynamoDB}></img>
-            </figure>
+          <div className='AnimationContainer'>
+            <animated.figure style={styles1} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1003}></img>
+            </animated.figure>
+            <animated.figure style={styles2} className="pic1" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1001}></img>
+            </animated.figure>
+            <animated.figure style={styles3} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1002}></img>
+            </animated.figure>
+            <animated.figure style={styles4} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1004}></img>
+            </animated.figure>
           </div>
         </div>
-      </div>
-       :
-       <div className='Project'>
-        <div className='ProjectContents'>
-          <div className='MainContent'>
-            <h1>Project 2</h1>
-            <p>RuneDen is a hub for gamers to get texture packs or seeds for their Minecraft worlds! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
-            <div className='Links'>
-              <a>Live Link</a>
+        {
+          //only for project 2 on width less then 700 it will format the html in a nice way for the user to see it
+          windowDimensions.width >= 700 ?
+          <div className='Project'>
+          <div className='AnimationContainer'>
+            <animated.figure style={styles1} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1003}></img>
+            </animated.figure>
+            <animated.figure style={styles2} className="pic1" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1001}></img>
+            </animated.figure>
+            <animated.figure style={styles3} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1002}></img>
+            </animated.figure>
+            <animated.figure style={styles4} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1004}></img>
+            </animated.figure>
+          </div>
+          <div className='ProjectContents'>
+            <div className='MainContent'>
+              <h1>Project 2</h1>
+              <p>RuneDen is a hub for gamers to get texture packs or seeds for their Minecraft worlds! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
+              <div className='Links'>
+                <a>Live Link</a>
+              </div>
+            </div>
+            <div className='TeachStackLogos'>
+              <figure>
+                <img src={ReactLogo}></img>
+              </figure>
+              <figure>
+                <img src={AWS}></img>
+              </figure>
+              <figure>
+                <img src={Lambda}></img>
+              </figure>
+              <figure className='dynamo'>
+                <img src={DynamoDB}></img>
+              </figure>
             </div>
           </div>
-          <div className='TeachStackLogos'>
-            <figure>
-              <img src={ReactLogo}></img>
-            </figure>
-            <figure>
-              <img src={AWS}></img>
-            </figure>
-            <figure>
-              <img src={Lambda}></img>
-            </figure>
-            <figure className='dynamo'>
-              <img src={DynamoDB}></img>
-            </figure>
-          </div>
         </div>
-        <div className='AnimationContainer'>
-          <animated.figure style={styles1} className="pic2" onClick={()=>{console.log('clicked')}}>
-            <img src={Project1003}></img>
-          </animated.figure>
-          <animated.figure style={styles2} className="pic1">
-            <img src={Project1001}></img>
-          </animated.figure>
-          <animated.figure style={styles3} className="pic2">
-            <img src={Project1002}></img>
-          </animated.figure>
-          <animated.figure style={styles4} className="pic2">
-            <img src={Project1004}></img>
-          </animated.figure>
-        </div>
-      </div>
-      }
-      <div className='Project'>
-        <div className='ProjectContents'>
-          <div className='MainContent MainContentWhite'>
-            <h1>Project 3</h1>
-            <p>RuneDen is a hub for gamers to get texture packs or seeds for their Minecraft worlds! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
-            <div className='Links'>
-              <a>Live Link</a>
+         :
+         <div className='Project'>
+          <div className='ProjectContents'>
+            <div className='MainContent'>
+              <h1>Project 2</h1>
+              <p>RuneDen is a hub for gamers to get texture packs or seeds for their Minecraft worlds! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
+              <div className='Links'>
+                <a>Live Link</a>
+              </div>
+            </div>
+            <div className='TeachStackLogos'>
+              <figure>
+                <img src={ReactLogo}></img>
+              </figure>
+              <figure>
+                <img src={AWS}></img>
+              </figure>
+              <figure>
+                <img src={Lambda}></img>
+              </figure>
+              <figure className='dynamo'>
+                <img src={DynamoDB}></img>
+              </figure>
             </div>
           </div>
-          <div className='TeachStackLogos TeachStackLogosWhite'>
-            <figure>
-              <img src={ReactLogo} className="React" ></img>
-            </figure>
-            <figure>
-              <img src={AWS} className="AWS"></img>
-            </figure>
-            <figure>
-              <img src={Lambda}></img>
-            </figure>
-            <figure className='dynamo'>
-              <img src={DynamoDB}></img>
-            </figure>
+          <div className='AnimationContainer'>
+            <animated.figure style={styles1} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1003}></img>
+            </animated.figure>
+            <animated.figure style={styles2} className="pic1" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1001}></img>
+            </animated.figure>
+            <animated.figure style={styles3} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1002}></img>
+            </animated.figure>
+            <animated.figure style={styles4} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1004}></img>
+            </animated.figure>
           </div>
         </div>
-        <div className='AnimationContainer'>
-          <animated.figure style={styles1} className="pic2" onClick={()=>{console.log('clicked')}}>
-            <img src={Project1003}></img>
-          </animated.figure>
-          <animated.figure style={styles2} className="pic1">
-            <img src={Project1001}></img>
-          </animated.figure>
-          <animated.figure style={styles3} className="pic2">
-            <img src={Project1002}></img>
-          </animated.figure>
-          <animated.figure style={styles4} className="pic2">
-            <img src={Project1004}></img>
-          </animated.figure>
+        }
+        <div className='Project'>
+          <div className='ProjectContents'>
+            <div className='MainContent MainContentWhite'>
+              <h1>Project 3</h1>
+              <p>RuneDen is a hub for gamers to get texture packs or seeds for their Minecraft worlds! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
+              <div className='Links'>
+                <a>Live Link</a>
+              </div>
+            </div>
+            <div className='TeachStackLogos TeachStackLogosWhite'>
+              <figure>
+                <img src={ReactLogo} className="React" ></img>
+              </figure>
+              <figure>
+                <img src={AWS} className="AWS"></img>
+              </figure>
+              <figure>
+                <img src={Lambda}></img>
+              </figure>
+              <figure className='dynamo'>
+                <img src={DynamoDB}></img>
+              </figure>
+            </div>
+          </div>
+          <div className='AnimationContainer'>
+            <animated.figure style={styles1} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1003}></img>
+            </animated.figure>
+            <animated.figure style={styles2} className="pic1" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1001}></img>
+            </animated.figure>
+            <animated.figure style={styles3} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1002}></img>
+            </animated.figure>
+            <animated.figure style={styles4} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
+              <img src={Project1004}></img>
+            </animated.figure>
+          </div>
         </div>
-      </div>
 
-    </div>
-
-    }
+      </div>
     </>
   )
 }
