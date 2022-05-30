@@ -175,7 +175,7 @@
 .App .AboutContainer .BackgroundAnimation {
   background-color: #070707;
   width: 100%;
-  height: 100%;
+  height: 90%;
   position: absolute;
   display: -webkit-box;
   display: -ms-flexbox;

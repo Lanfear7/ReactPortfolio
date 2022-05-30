@@ -53,15 +53,37 @@ function Projects() {
     delay: 9000
   })
 
+  const [popUp, setPopUp] = useState (false)
+  const [img, setImg] = useState()
 
-  function ImgPopUp(e){
-    console.log('clicked item', e.target.src)
-    return <h1>ZFDGDZHDRHDRHDHA</h1>
+  // on img click set popup to true ans set the e.taget.src to img *DONE* 
+  // then in the conditional call the imgPopUp function *DONE* 
+  // have popup contaier sticky and take up 100% width + height 
+
+
+  function ImgPopUpSetUp(e){
+    setPopUp(true)
+    setImg(e.target.src)
+  }
+
+  function ImgCardPopUp(){
+    return <div className='popUpBackGround'>
+      <div className='popUpContainer'>
+        <h1>PopUp</h1>
+        <img src={img}></img>
+      </div>
+    </div>
   }
   
 
   return (
-    <div id="Projects" className='ProjectsContainer'>
+    <>
+    {
+      popUp 
+      ?
+        ImgCardPopUp()
+      :
+      <div id="Projects" className='ProjectsContainer'>
       <h1 className='Heading'>Projects</h1>
       <div className='Project'>
         <div className='ProjectContents'>
@@ -88,16 +110,16 @@ function Projects() {
           </div>
         </div>
         <div className='AnimationContainer'>
-          <animated.figure style={styles1} className="pic2" onClick={(e)=>{ImgPopUp(e)}}>
+          <animated.figure style={styles1} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
             <img src={Project1003}></img>
           </animated.figure>
-          <animated.figure style={styles2} className="pic1" onClick={(e)=>{ImgPopUp(e)}}>
+          <animated.figure style={styles2} className="pic1" onClick={(e)=>{ImgPopUpSetUp(e)}}>
             <img src={Project1001}></img>
           </animated.figure>
-          <animated.figure style={styles3} className="pic2" onClick={(e)=>{ImgPopUp(e)}}>
+          <animated.figure style={styles3} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
             <img src={Project1002}></img>
           </animated.figure>
-          <animated.figure style={styles4} className="pic2" onClick={(e)=>{ImgPopUp(e)}}>
+          <animated.figure style={styles4} className="pic2" onClick={(e)=>{ImgPopUpSetUp(e)}}>
             <img src={Project1004}></img>
           </animated.figure>
         </div>
@@ -226,6 +248,9 @@ function Projects() {
       </div>
 
     </div>
+
+    }
+    </>
   )
 }
 
