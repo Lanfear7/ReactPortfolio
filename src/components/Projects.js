@@ -95,7 +95,7 @@ function Projects() {
           <div className='ProjectContents'>
             <div className='MainContent'>
               <h1>RuneDen</h1>
-              <p>RuneDen is a hub for gamers to get texture packs or seeds for their Minecraft worlds! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
+              <p>RuneDen is a hub for gamers to get all their latest and greatest game content! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
               <div className='Links'>
                 
               </div>
@@ -150,8 +150,8 @@ function Projects() {
           </div>
           <div className='ProjectContents'>
             <div className='MainContent'>
-              <h1>Portfolio</h1>
-              <p>This portfolio was built useing React along with some React packages such as React-Spring for the animation and emailJs for a potential client to beable to contact me.</p>
+              <h1>Portflio</h1>
+              <p>Here is a look into how i made my portfolio, Its all build from scratch using react along with a few libraries such as EmailJS to send emails to my inbox and React Spring inorder to do the animations. For some of the animations the key values i needed where held in global state using Context and wrapping the app within a provider to share those values across the whole app.</p>
               <div className='Links'>
               </div>
             </div>

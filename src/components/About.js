@@ -180,7 +180,6 @@ function About() {
           <div>
             <p>I really enjoy developing web apps with Node/Express and React, I also enjoy building out the UI and UX side of things with some animations to make the experience more enjoyable and interactive for the user.</p>
             <p>My main experience is in Front and Back-End development. However, I alos enjoy creating projects that incorperate SQL or noSQL databases in order to have a fully functional full stack web app.</p>
-            <button type='button'><p>Resume</p></button>
           </div>
         </div>
     </div>
