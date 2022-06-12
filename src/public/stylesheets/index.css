@@ -532,8 +532,8 @@
 }
 
 .App .ProjectsContainer .Project .ProjectContents .TeachStackLogos figure img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
   width: 100%;
   height: 100%;
   -webkit-filter: invert(10%);
@@ -544,9 +544,9 @@
   width: 250px;
 }
 
-.App .ProjectsContainer .Project .ProjectContents .TeachStackLogosWhite figure .AWS {
-  -webkit-filter: invert(90%);
-          filter: invert(90%);
+.App .ProjectsContainer .Project .ProjectContents .Light figure img {
+  -webkit-filter: invert(70%);
+          filter: invert(70%);
 }
 
 @media only screen and (max-width: 1100px) {
