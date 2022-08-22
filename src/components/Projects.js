@@ -100,7 +100,10 @@ function Projects() {
           <div className='ProjectContents'>
             <div className='MainContent'>
               <h1>RuneDen</h1>
-              <p>RuneDen is a hub for gamers to get all their latest and greatest game content! I bild this app using React,Node/Express, and MySQL. You are able to create a account and login inorder to get varified and post texture packs. You can download any texture pack avalibe without an account though.</p>
+              <p>RuneDen is a hub for gamers to get all their latest and greatest game content! 
+                I built this app using React, Node/Express, and MySQL. 
+                Users can create an account to get verified and post things like
+                texture packs and game modifications.</p>
               <div className='Links'>
                 
               </div>
@@ -155,8 +158,12 @@ function Projects() {
           </div>
           <div className='ProjectContents'>
             <div className='MainContent'>
-              <h1>Portflio</h1>
-              <p>Here is a look into how i made my portfolio, Its all build from scratch using react along with a few libraries such as EmailJS to send emails to my inbox and React Spring inorder to do the animations. For some of the animations the key values i needed where held in global state using Context and wrapping the app within a provider to share those values across the whole app.</p>
+              <h1>Portfolio</h1>
+              <p>My portfolio was all built from scratch using React, along 
+                with a few libraries such as EmailJS and 
+                React Spring for the animations. For some of the animations, I held the key values 
+                I needed in global state, using Context and wrapping the app within a 
+                provider to share those values across the whole app.</p>
               <div className='Links'>
               </div>
             </div>
@@ -178,8 +185,12 @@ function Projects() {
           <div className='ProjectContents'>
             <div className='MainContent'>
               <h1>Portfolio</h1>
-              <p>This portfolio was built useing React along with some React packages such as React-Spring for the animation and emailJs for a potential client to beable to contact me.</p>
-              <div className='Links'>
+              <p>My portfolio was all built from scratch using React, along 
+                with a few libraries such as EmailJS and 
+                React Spring for the animations. For some of the animations, I held the key values 
+                I needed in global state, using Context and wrapping the app within a 
+                provider to share those values across the whole app.</p>              
+                <div className='Links'>
               </div>
             </div>
             <div className='TeachStackLogos Light'>
@@ -214,7 +225,9 @@ function Projects() {
           <div className='ProjectContents'>
             <div className='MainContent MainContentWhite'>
               <h1>Forever Hungry</h1>
-              <p>Forever Hungry is a recipe app where you can find and search for the pefect recipe for tonights dinner. This app is built using HTML/CSS and vanilla JavaScript, to get the recipes im using the Spoonacular API then displaying those tasty treats in a user friendly way.</p>
+              <p>Forever Hungry is a recipe app where you can find and search for the pefect recipe for tonights dinner. 
+                This app was built using HTML/CSS and vanilla JavaScript. All recipes come from the Spoonacular API,
+                displaying those tasty treats in a user friendly way.</p>
               <div className='Links'>
               </div>
             </div>

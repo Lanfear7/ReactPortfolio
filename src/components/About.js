@@ -178,8 +178,13 @@ function About() {
         </div>
         <div className='AboutText'>
           <div>
-            <p>I really enjoy developing web apps with Node/Express and React, I also enjoy building out the UI and UX side of things with some animations to make the experience more enjoyable and interactive for the user.</p>
-            <p>My main experience is in Front and Back-End development. However, I alos enjoy creating projects that incorperate SQL or noSQL databases in order to have a fully functional full stack web app.</p>
+            <p>I really enjoy developing web applications with Node/Express and React.
+              Building out the UI and implementing nice UX features is my favorite part- like 
+              animations, to make the experience more enjoyable and interactive for the user.</p>
+
+            <p>My main experience is in frontend and backend development, however, 
+              I also enjoy creating projects that incorporate an SQL or NOSQL database,
+              in order to have a dynamic, full stack application.</p>
           </div>
         </div>
     </div>

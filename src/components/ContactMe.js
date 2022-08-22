@@ -31,7 +31,7 @@ function ContactMe() {
 
     return (
         <div id="ContactMe">
-            <h1>Get Intouch</h1> 
+            <h1>Get In touch</h1> 
             <form ref={form} onSubmit={sendEmail}>
               <input onChange={(e)=> setName(e.target.value) } type="text" name="from_name" placeholder='Name'/>
               <input onChange={(e)=> setEmail(e.target.value) } type="email" name="user_email" placeholder='Email'/>
