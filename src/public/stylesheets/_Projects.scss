@@ -35,19 +35,25 @@
                 display: flex;
                 justify-content: center;
                 flex-wrap: wrap;
-                height: 80%;
+                height: 90%;
                 h1{
                     flex-basis: 100%;
                 }
                 p{
                     width: 90%;
-                    height: 20%;
+                    height: 70%;
+                    overflow-y: scroll;
                 }
                 .Links{
                     height: 10%;
                     flex-basis: 100%;
                     display: flex;
                     justify-content: center;
+                    a{
+                        text-decoration: none;
+                        color: rgb(97, 44, 161);
+                        font-weight: bold;
+                    }
                     a:hover{
                         cursor: pointer;
                     }
@@ -114,7 +120,7 @@
             }
         }
     }
-    @media only screen and (max-width: 700px) {
+    @media only screen and (max-width: 860px) {
         .Project{
             display: flex;
             justify-content: space-evenly;
@@ -152,5 +158,9 @@
             }
         }
       }
-    
 }
+@media only screen and (max-width: 865px) {
+    .ProjectsContainer{
+        background: linear-gradient(3deg, transparent 35% , rgb(7, 7, 7) 1em ), white;
+    }
+  }

@@ -22,7 +22,7 @@ function ContactMe() {
                 });
                 e.target.reset()
         }else{
-            setMessage('Please fill in the all of the information in the form!')
+            setMessage('Please fill in the all of the information in the form.')
         }
         setName('')
         setEmail('')

@@ -12,14 +12,6 @@ function About() {
 
   const {windowDimensions, toggleAboutAnimation} = useContext(ScreenSizeContext)
 
-  //console.log(scrollTop)
-  
-  /*console.log(`Origianl ${windowDimensions.width}  For 50 should = ${windowDimensions.width * .03} For 70 should = ${windowDimensions.width * .04}
-    For 100 should =${windowDimensions.width * .07} For 200 should =${windowDimensions.width * .13} For 300 should =${windowDimensions.width * .2}
-     For 400 should =${windowDimensions.width * .26}  ||  ${windowDimensions.width * .185}
-      `)*/
-
-
   const JsDropDownAndBounce = useTransition(toggleAboutAnimation, {
     from: { y: 0, x: 100, rotate: 270, opacity: 0 },
     enter: [
@@ -178,13 +170,12 @@ function About() {
         </div>
         <div className='AboutText'>
           <div>
-            <p>I really enjoy developing web applications with Node/Express and React.
-              Building out the UI and implementing nice UX features is my favorite part- like 
-              animations, to make the experience more enjoyable and interactive for the user.</p>
+            <p>Crafting amazing web applications with Node/Express and React is my passion. I absolutely love pushing the boundaries of what's possible with UI design and UX features, and creating captivating animations that take the user experience to the next level is what sets my heart on fire.</p>
 
-            <p>My main experience is in frontend and backend development, however, 
-              I also enjoy creating projects that incorporate an SQL or NOSQL database,
-              in order to have a dynamic, full stack application.</p>
+            <p>As a web developer, there's nothing quite like bringing a design to life and seeing it come to fruition in a way that is both enjoyable and interactive for the user. With Node/Express and React, the possibilities are endless, and I'm always eager to dive headfirst into a new project and explore what can be achieved.
+            <br></br>
+            <br></br>
+At the end of the day, it's all about delivering an exceptional user experience, and that's what drives me to create web applications that truly make a difference.</p>
           </div>
         </div>
     </div>

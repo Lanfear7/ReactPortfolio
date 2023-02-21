@@ -1,7 +1,7 @@
 #ContactMe{
     padding-top: 150px;
     background-color: white;
-    height: 110%;
+    height: 500px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -27,16 +27,21 @@
         }
         textarea{
             flex-basis: 90%;
-            height: 40px;
+            height: 100px;
             border: none;
             border-bottom: 1px solid black ;
         }
         .Btn{
             margin-top: 20px;
             flex-basis: 10%;
-            border: 1px solid rgb(7, 7, 7);
-            background-color: white;
-            height: 30px;
+            background-color: rgb(97, 44, 161);
+            color: white;
+            height: 40px;
+            width: 100px;
+            border-radius: 5px;
+        }
+        .Btn:hover{
+            cursor: pointer;
         }
     }
     h2{
