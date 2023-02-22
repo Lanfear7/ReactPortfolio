@@ -648,6 +648,10 @@
      object-fit: cover;
 }
 
+.App .ProjectsContainer .Project .AnimationContainer figure:hover {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 860px) {
   .App .ProjectsContainer .Project {
     display: -webkit-box;

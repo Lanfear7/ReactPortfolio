@@ -102,7 +102,7 @@ function Projects() {
               Using ReactJS, I was able to turn this vision into a reality, crafting an impressive and fully responsive website that was not only visually striking but also incredibly engaging. I utilized a range of custom animations and interactive features to make the portfolio experience truly unforgettable, immersing visitors in a one-of-a-kind showcase of the client's work and achievements.
               <br></br>
               <br></br>
-              From start to finish, the client was thrilled with the results, and I couldn't be more proud of the end product. By working closely with the client and leveraging the power of ReactJS, we were able to create a portfolio website that exceeded expectations and left a lasting impression on everyone who visited it.
+              From start to finish, the client was thrilled with the results, and I couldn't be more proud of the end product. By working closely with the client and leveraging the power of ReactJS, I was able to create a portfolio website that exceeded expectations and left a lasting impression on everyone who visited it.
               </p>              
               <div className='Links'>
                 <a href='https://www.drstewartpatterson.ca/'>Live Site</a>
@@ -162,7 +162,7 @@ function Projects() {
               I didn't just stop at aesthetics, though. I aimed to create a seamless communication experience with EmailJS, making it easy for customers to contact the shop owner with inquiries directly from the web page. This helped to reduce friction in the purchasing process, leading to more inquiries and more sales.
               <br></br>
               <br></br>
-              I knew that security was of utmost importance, which is why we implemented CloudFare to handle all site traffic, providing SSL and DDoS protection. With my comprehensive approach to design and security, Blue Monkey's Woodworking can now confidently reach a wider audience and stand out in the online marketplace.</p>   
+              I knew that security was of utmost importance, which is why I implemented CloudFare to handle all site traffic, providing SSL and DDoS protection. With my comprehensive approach to design and security, Blue Monkey's Woodworking can now confidently reach a wider audience and stand out in the online marketplace.</p>   
               <div className='Links'>
                 <a href='https://www.bluemonkeyswoodworking.ca/'>Live Site</a>
               </div>
@@ -191,7 +191,7 @@ function Projects() {
               We didn't just stop at aesthetics, though. We aimed to create a seamless communication experience with EmailJS, making it easy for customers to contact the shop owner with inquiries directly from the web page. This helped to reduce friction in the purchasing process, leading to more inquiries and more sales.
               <br></br>
               <br></br>
-              We knew that security was of utmost importance, which is why we implemented CloudFare to handle all site traffic, providing SSL and DDoS protection. With our comprehensive approach to design and security, Blue Monkey's Woodworking can now confidently reach a wider audience and stand out in the online marketplace.</p>                
+              We knew that security was of utmost importance, which is why I implemented CloudFare to handle all site traffic, providing SSL and DDoS protection. With our comprehensive approach to design and security, Blue Monkey's Woodworking can now confidently reach a wider audience and stand out in the online marketplace.</p>                
               <div className='Links'>
                 <a href='https://www.bluemonkeyswoodworking.ca/'>Live Site</a>
               </div>

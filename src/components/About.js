@@ -170,12 +170,11 @@ function About() {
         </div>
         <div className='AboutText'>
           <div>
-            <p>Crafting amazing web applications with Node/Express and React is my passion. I absolutely love pushing the boundaries of what's possible with UI design and UX features, and creating captivating animations that take the user experience to the next level is what sets my heart on fire.</p>
-
+            <p>Crafting amazing web applications with Node/Express and React is my passion. I absolutely love pushing the boundaries of what's possible with UI design and UX features, and creating captivating animations that take the user experience to the next level.</p>
             <p>As a web developer, there's nothing quite like bringing a design to life and seeing it come to fruition in a way that is both enjoyable and interactive for the user. With Node/Express and React, the possibilities are endless, and I'm always eager to dive headfirst into a new project and explore what can be achieved.
             <br></br>
             <br></br>
-At the end of the day, it's all about delivering an exceptional user experience, and that's what drives me to create web applications that truly make a difference.</p>
+            At the end of the day, it's all about delivering an exceptional user experience, and that's what drives me to create web applications that truly make a difference.</p>
           </div>
         </div>
     </div>
